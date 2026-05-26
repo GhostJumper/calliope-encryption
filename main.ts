@@ -5,7 +5,7 @@
  * generated for an **exported** function.
  */
 
-//% color="#AA278D" weight=100 block="Encryption"
+//% color="#AA278D" weight=100 icon="\uf023" block="Encryption"
 //% block.loc.de="Verschlüsselung"
 namespace Encryption {
     /**
@@ -15,6 +15,7 @@ namespace Encryption {
      * @param text the input string to encrypt
      * @param offset the number of positions to shift each letter
      */
+    //% blockId="encryption_caesar_encrypt"
     //% block="caesar cipher encrypt $text with offset $offset"
     //% block.loc.de="Caesar-Verschlüsselung $text mit Versatz $offset"
     //% jsdoc.loc.de="Verschlüsselt einen Text mit der Caesar-Verschlüsselung, indem jeder Buchstabe um den angegebenen Versatz verschoben wird. Nicht-Buchstaben bleiben unverändert."
@@ -40,5 +41,23 @@ namespace Encryption {
             }
         }
         return result;
+    }
+
+    /**
+     * Decrypts a string that was encrypted with the Caesar cipher by reversing
+     * the shift. Non-letter characters are left unchanged.
+     * @param text the encrypted string to decrypt
+     * @param offset the same offset that was used to encrypt
+     */
+    //% blockId="encryption_caesar_decrypt"
+    //% block="caesar cipher decrypt $text with offset $offset"
+    //% block.loc.de="Caesar-Entschlüsselung $text mit Versatz $offset"
+    //% jsdoc.loc.de="Entschlüsselt einen mit der Caesar-Verschlüsselung verschlüsselten Text. Nicht-Buchstaben bleiben unverändert."
+    //% text.loc.de="Der zu entschlüsselnde Text"
+    //% offset.loc.de="Der Versatz, der zur Verschlüsselung verwendet wurde"
+    //% text.defl="Khoor"
+    //% offset.min=-25 offset.max=25 offset.defl=3
+    export function caesarDecrypt(text: string, offset: number): string {
+        return caesarEncrypt(text, -offset);
     }
 }

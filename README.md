@@ -1,6 +1,15 @@
 
 > Diese Seite bei [https://ghostjumper.github.io/calliope-encryption/](https://ghostjumper.github.io/calliope-encryption/) öffnen
 
+# calliope-encryption
+
+Eine MakeCode-Erweiterung für den **Calliope mini**, die einfache Verschlüsselung mit dem **Caesar-Verfahren** ermöglicht.
+
+## Verfügbare Blöcke
+
+- **`caesar cipher encrypt`** – Verschlüsselt einen Text, indem jeder Buchstabe um einen gegebenen Versatz im Alphabet verschoben wird. Nicht-Buchstaben (Leerzeichen, Satzzeichen, …) bleiben unverändert.
+- **`caesar cipher decrypt`** – Entschlüsselt einen mit dem Caesar-Verfahren verschlüsselten Text mit demselben Versatz.
+
 ## Als Erweiterung verwenden
 
 Dieses Repository kann als **Erweiterung** in MakeCode hinzugefügt werden.
