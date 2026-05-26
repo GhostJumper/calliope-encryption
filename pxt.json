@@ -1,6 +1,6 @@
 {
     "name": "Encryption",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "Caesar cipher encryption and decryption blocks for the Calliope mini.",
     "dependencies": {
         "core": "*",
